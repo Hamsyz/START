@@ -1,0 +1,135 @@
+/* Size for brand */
+nav .navbar-brand
+{
+    font-size: xx-large;
+}
+
+/* Colors for brand */
+nav .navbar-brand .blue
+{
+    color: #537fbe;
+}
+nav .navbar-brand .red
+{
+    color: #ea433b;
+}
+nav .navbar-brand .yellow
+{
+    color: #f5b82e;
+}
+nav .navbar-brand .green
+{
+    color: #2e944b;
+}
+
+#sell {
+    background-color: crimson;
+}
+
+#buy {
+    background-color: green;
+}
+
+#stockinfo , #stockinfoq ,#stockinfos{
+    border-top: 6px solid;
+    border-bottom: 6px solid;
+    padding: 10px;
+    font-weight: bold;
+    display: inline-block;
+}
+
+#stockinfoq {
+    border-color:steelblue;
+}
+
+#stockinfo {
+    border-color:darkgreen;
+}
+
+#stockinfos {
+    border-color:firebrick;
+}
+
+#sharenumber{
+    width : 180px;
+    text-align:center;
+    padding: 2px;
+    font-size:16px;
+    border-radius:6px;
+    background-color: #f9fafb;
+    border: 1px solid #d0d5dd;
+}
+
+#sharenumber::placeholder {
+  transition: opacity 0.2s ease;
+}
+
+#sharenumber:focus::placeholder {
+  opacity: 0;
+}
+
+
+
+.history-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+    background: #ffffff;
+}
+
+.history-table th,
+.history-table td {
+    padding: 10px 14px;
+    text-align: left;
+}
+
+.history-table th {
+    background-color: #f3f4f6;
+    font-weight: 600;
+}
+
+.history-table tr {
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.history-table tr:hover {
+    background-color: #f9fafb;
+}
+
+#total{
+    color : green;
+}
+
+#balance{
+    color : cornflowerblue;
+}
+
+.select {
+  width: 180px;
+  padding: 8px 12px;
+  font-size: 16px;
+  color: #333;
+  background-color: #f9fafb;
+  border: 1px solid #d0d5dd;
+  border-radius: 6px;
+  outline: none;
+  cursor: pointer;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.select:hover {
+  border-color: #9aa4b2;
+}
+
+.select:focus {
+  border-color: #4f46e5; /* soft mavi */
+  box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.15);
+}
+
+.select option {
+  color: #333;
+}
+
+.selldiv{
+    margin-bottom: 12px
+}

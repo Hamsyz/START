@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Portfolio
+{% endblock %}
+
+{% block main %}
+    <table class = history-table>
+        <tr>
+            <th>Stock Name</th>
+            <th>Stock Price</th>
+            <th>Quantity</th>
+            <th>Total Value</th>
+        </tr>
+        {% for stock in history %}
+        <tr>
+            <td>{{stock.symbol}}</td>
+            <td>{{stock.price | usd}}</td>
+            <td>{{stock.totalshares}}</td>
+            <td>{{stock.totalvalue | usd}}</td>
+        </tr>
+        {% endfor %}
+        <tr>
+            <td id  = total>TOTAL:</td>
+            <td></td>
+            <td></td>
+            <td id = total>{{totaltotal | usd}}</td>
+        </tr>
+        <tr>
+            <td id = balance>BALANCE:</td>
+            <td></td>
+            <td></td>
+            <td id = balance>{{balance | usd}}</td>
+        </tr>
+    </table>
+{% endblock %}

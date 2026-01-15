@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    History
+{% endblock %}
+
+{% block main %}
+    <table class = history-table>
+        <tr>
+            <th>Stock Name</th>
+            <th>Operetion</th>
+            <th>Stock Price</th>
+            <th>Quantity</th>
+            <th>Total Value</th>
+            <th>Date</th>
+        </tr>
+        {% for stock in history %}
+        <tr {% if stock.operation== "SELL"%}
+        style = "background-color: #FF746C"
+        {%else%}
+        style = "background-color: #80EF80"
+        {%endif%}>
+            <td style = "font-weight: bold">{{stock.symbol}}</td>
+            <td>{{stock.operation}}</td>
+            <td>{{stock.price | usd}}</td>
+            <td>{{stock.shares | abs}}</td>
+            <td>{{stock.total | usd}}</td>
+            <td>{{stock.timestamp}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

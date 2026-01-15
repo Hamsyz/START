@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quote
+{% endblock %}
+
+{% block main %}
+
+    {% if stockinfo %}
+        <div class="mb-3" id="stockinfoq">
+            {{ stockinfo.name }} /// {{ stockinfo.symbol }} /// {{ stockinfo.price }}
+        </div>
+        <div>
+            <form action="/quote" method ="post">
+                <a href="/buy?symbol={{ stockinfo.symbol }}" id="buy" class="btn btn-primary">BUY</a>
+                <a href="/sell?symbol={{ stockinfo.symbol }}" id="sell" class="btn btn-primary">SELL</a>
+            </form>
+        </div>
+
+        <div class="mb-3"></div>
+        <div class="mb-3"></div>
+    {% endif %}
+
+    <form action="/quote" method="post">
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="stocksymbol" placeholder="Stock Symbol" type="text">
+        </div>
+
+        <button class="btn btn-primary" type="submit">Look up</button>
+    </form>
+
+
+{% endblock %}
